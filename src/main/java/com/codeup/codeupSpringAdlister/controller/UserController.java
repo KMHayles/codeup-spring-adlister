@@ -27,6 +27,10 @@ public class UserController {
     }
 
 
+    @GetMapping("/registers")
+    public String showRegistrationForms(){
+        return "/register";
+    }
 
     @PostMapping("/register")
     public String registerUser(@RequestParam(name="username") String username, @RequestParam(name="email") String email, @RequestParam(name="password") String password){
